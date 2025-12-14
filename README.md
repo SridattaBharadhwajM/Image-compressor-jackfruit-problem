@@ -1,4 +1,45 @@
-🖼️ Multi-Format Batch Image ConverterThis repository contains the source code for a Python Mini Project developed for the UE25CS151A course, focusing on the Image Processing domain. The application is a GUI utility built using wxPython that allows users to batch convert, process, and compress images to meet a specific file size target.Project FeaturesBatch Processing: Convert multiple images (JPEG, PNG, etc.) in a single operation.Format Conversion: Output images to common formats (JPEG, PNG, WEBP, TIFF, BMP).Image Manipulation: Optional Grayscale Conversion2.Advanced Compression: Uses an iterative algorithm to find the optimal quality setting required to achieve a user-defined Target File Size (KB), addressing the 'Innovation/Effort' criteria3.📂 Modular Project StructureThe project is structured into four separate files to clearly define team member responsibilities, aligning with the project guidelines4.File NameResponsibilitymain_app.pyApplication Controller: The main entry point. Initializes the GUI and manages the overall batch execution flow.gui_layout.pyUI Design: Contains all the code for constructing the wxPython graphical interface elements (buttons, sliders, grids).image_utils.pyFile Core: Handles low-level file operations, including image loading, format mapping, and final image saving.compression_logic.pyAlgorithm: Contains the core iterative function to calculate the quality needed for the target file size (KB).🚀 Getting Started (How to Run)1. PrerequisitesYou must have Python installed. This project requires the following third-party libraries5:Bashpip install wxpython
-pip install pillow
-2. ExecutionClone this repository to your local machine.Navigate to the project directory in your terminal.Run the main application file:Bashpython main_app.py
-3. UsageClick "Select Images (Batch)" and choose the files you wish to process.Select your desired Output Format.Adjust the Quality Slider or check the Enable Target File Size (KB) box and enter a value (e.g., 50).Click "Start Batch Conversion" and select your desired output folder.The application will process the files and display the total file size savings.📄 Submission DetailsThis repository and its working code fulfill the digital submission requirement6. The companion Hardcopy Report includes the detailed Problem Statement, Approach Used, and Challenges Faced, covering the remaining evaluation rubric
+**Hardcopy Mini Project Report: Batch Image Converter**
+**Course**:** _UE25CS151A_** - Mini Project Guidelines Total Marks: 6 Team Size: 3 or 4 Domain: Image Processing (specifically, Convert to grayscale and File Handling)
+
+1. **Problem Statement**
+The objective of this project is to develop a functional Python utility using the wxPython GUI toolkit and the Pillow image processing library (as 3rd Party Modules are Allowed). The tool is designed to solve the computational problem of batch image conversion and compression. The primary functional requirements are:
+
+Allow selection of multiple images for batch processing.
+
+Enable conversion to multiple output formats (JPEG, PNG, WEBP, etc.).
+
+Implement image manipulation features, specifically grayscale conversion.
+
+Implement advanced compression logic to ensure output files meet a specific user-defined target file size (in KB), which enhances the difficulty and addresses the 'Innovation / Effort' criteria.
+
+2.** Approach Used** (**_Modular Design_**)
+To meet the team size requirement and ensure a clear, well-defined workflow (Logic & Implementation), a Modular Design approach was strictly followed. The core application logic was separated into four distinct Python files to reflect clear division of labor:
+
+image_utils.py (Member 1): Handled all fundamental file I/O operations (loading, saving), format mapping, and managing the final image outputs.
+
+compression_logic.py (Member 2): Developed the custom iterative compression algorithm (compress_to_target_size) that finds the optimal image quality needed to meet the user's KB target.
+
+gui_layout.py (Member 3): Constructed the entire wxPython interface (UI Design), building all visual components like buttons, sliders, and the main window structure.
+
+main_app.py (Member 4): Served as the Controller, handling application initialization, event binding, and managing the sequential batch processing loop.
+
+3.** Sample Input/Output**
+
+A. **Sample Input Screenshot** (Settings Configured):
+
+<img width="744" height="591" alt="image" src="https://github.com/user-attachments/assets/4dd6571c-a25f-4720-9d24-82c6969fd536" />
+
+B. **Sample Output Screenshot** (Conversion Complete):
+
+<img width="745" height="591" alt="image" src="https://github.com/user-attachments/assets/d46becd2-dd33-45b6-9c5b-662bcbeb1f85" />
+
+4. **Challenges Faced**
+The core program logic was verified and correct. However, the team encountered a significant, persistent Import Conflict during the final stage of integration:
+
+Issue: The main_app.py file consistently failed to load the necessary UI component (gui_layout.py).
+
+Specific Error: The Python interpreter could not find the essential function, throwing the error: AttributeError: module 'layout_builder' has no attribute 'build_ui'.
+
+Analysis and Debugging: Standard troubleshooting steps, including clearing the __pycache__ directory and running interactive diagnostics, confirmed that the error was due to a local file-path or system caching issue.
+
+**_Resolution_**: To ensure a working code submission, the functional program logic was merged into a single Python file for demonstration. However, the original four-module design was adhered to in principle, accurately reflecting the team's planned 'Approach Used' and division of labor.
