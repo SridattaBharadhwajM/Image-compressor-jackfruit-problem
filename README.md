@@ -1,8 +1,8 @@
 **Hardcopy Mini Project Report: Batch Image Converter**
-**Course**:** _UE25CS151A_** - Mini Project Guidelines Total Marks: 6 Team Size: 3 or 4 Domain: Image Processing (specifically, Convert to grayscale and File Handling)
+**Course**:** _UE25CS151A_** - Mini Project Guidelines Domain: Image Processing (specifically, Convert to grayscale and File Handling)
 
 1. **Problem Statement**
-The objective of this project is to develop a functional Python utility using the wxPython GUI toolkit and the Pillow image processing library (as 3rd Party Modules are Allowed). The tool is designed to solve the computational problem of batch image conversion and compression. The primary functional requirements are:
+The objective of this project is to develop a functional Python utility using the wxPython GUI toolkit and the Pillow image processing library. The tool is designed to solve the computational problem of batch image conversion and compression. The primary functional requirements are:
 
 Allow selection of multiple images for batch processing.
 
@@ -10,10 +10,10 @@ Enable conversion to multiple output formats (JPEG, PNG, WEBP, etc.).
 
 Implement image manipulation features, specifically grayscale conversion.
 
-Implement advanced compression logic to ensure output files meet a specific user-defined target file size (in KB), which enhances the difficulty and addresses the 'Innovation / Effort' criteria.
+Implement advanced compression logic to ensure output files meet a specific user-defined target file size (in KB), which enhances the difficulty .
 
 2.** Approach Used** (**_Modular Design_**)
-To meet the team size requirement and ensure a clear, well-defined workflow (Logic & Implementation), a Modular Design approach was strictly followed. The core application logic was separated into four distinct Python files to reflect clear division of labor:
+To meet the team size requirement and ensure a clear, well-defined workflow , a Modular Design approach was strictly followed. The core application logic was separated into four distinct Python files to reflect clear division of labor:
 
 image_utils.py (Member 1): Handled all fundamental file I/O operations (loading, saving), format mapping, and managing the final image outputs.
 
@@ -25,11 +25,11 @@ main_app.py (Member 4): Served as the Controller, handling application initializ
 
 3.** Sample Input/Output**
 
-A. **Sample Input Screenshot** (Settings Configured):
+A. **Sample Input Screenshot** :
 
 <img width="744" height="591" alt="image" src="https://github.com/user-attachments/assets/4dd6571c-a25f-4720-9d24-82c6969fd536" />
 
-B. **Sample Output Screenshot** (Conversion Complete):
+B. **Sample Output Screenshot**:
 
 <img width="745" height="591" alt="image" src="https://github.com/user-attachments/assets/d46becd2-dd33-45b6-9c5b-662bcbeb1f85" />
 
