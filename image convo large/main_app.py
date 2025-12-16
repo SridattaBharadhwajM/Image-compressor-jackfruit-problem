@@ -13,14 +13,13 @@ class ImageConverterFrame(wx.Frame):
         self.selected_paths = []
         # 1. Initialize UI using Member 3's module
         panel = wx.Panel(self)
-        gui_layout.build_ui(self, panel) # Calls the UI builder function from gui_layout
+        gui_layout.build_ui(self, panel)
         # 2. Bind Events
         self.select_btn.Bind(wx.EVT_BUTTON, self.on_select_images)
         self.start_btn.Bind(wx.EVT_BUTTON, self.on_start_conversion)
         self.quality_slider.Bind(wx.EVT_SLIDER, self.on_quality_change)
         self.Centre()
         self.Show()
-    # Helper methods for updating UI (Corrected to use self and gui_layout functions)
     def update_status(self, text, color=wx.Colour(0, 120, 0)):
         self.status_label.SetLabel(text)
         try:
@@ -37,7 +36,7 @@ class ImageConverterFrame(wx.Frame):
         percentage = (savings / original_kb) * 100 if original_kb > 0 else 0
         comparison_text = (f"Batch Summary:\n" f"Original Total: {original_kb:,.2f} KB\n" f"Compressed Total: {final_kb:,.2f} KB\n" f"Total Savings: {savings:,.2f} KB ({percentage:.1f}%)")
         self.summary_text.SetLabel(comparison_text)
-    # --- Event Handlers (Controller) ---
+    #  Event Handlers (Controller) 
     def on_select_images(self, event):
         wildcard = "Image files (*.jpeg;*.jpg;*.png;*.gif;*.tiff;*.tif;*.bmp;*.webp)|*.jpeg;*.jpg;*.png;*.gif;*.tiff;*.tif;*.bmp;*.webp"
         dlg = wx.FileDialog(self, "Select images", wildcard=wildcard,
@@ -98,7 +97,7 @@ class ImageConverterFrame(wx.Frame):
                 if use_target_size:
                     # Calls the logic from the compression_logic module
                     final_quality = compression_logic.compress_to_target_size(image.copy(), target_size_kb, output_format_pil)
-                # 4. Save
+                # 4. file
                 original_filename = os.path.basename(input_path)
                 base, _ = os.path.splitext(original_filename)
                 out_ext = output_format_pil.lower() if output_format_pil.lower() != "jpeg" else "jpg"
