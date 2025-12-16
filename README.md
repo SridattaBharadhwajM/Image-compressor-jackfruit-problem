@@ -1,7 +1,7 @@
-**Hardcopy Mini Project Report: Batch Image Converter**
-**Course**:** _UE25CS151A_** - Mini Project Guidelines Domain: Image Processing (specifically, Convert to grayscale and File Handling)
+# **Hardcopy Mini Project Report: Batch Image Converter**
+# **Course**:**_UE25CS151A_** - Mini Project Guidelines Domain: Image Processing (specifically, Convert to grayscale and File Handling)
 
-1. **Problem Statement**
+# 1. **Problem Statement**
 The objective of this project is to develop a functional Python utility using the wxPython GUI toolkit and the Pillow image processing library. The tool is designed to solve the computational problem of batch image conversion and compression. The primary functional requirements are:
 
 Allow selection of multiple images for batch processing.
@@ -12,7 +12,7 @@ Implement image manipulation features, specifically grayscale conversion.
 
 Implement advanced compression logic to ensure output files meet a specific user-defined target file size (in KB), which enhances the difficulty .
 
-2.** Approach Used** (**_Modular Design_**)
+# 2.**Approach Used** (**_Modular Design_**)
 To meet the team size requirement and ensure a clear, well-defined workflow , a Modular Design approach was strictly followed. The core application logic was separated into four distinct Python files to reflect clear division of labor:
 
 image_utils.py (Member 1): Handled all fundamental file I/O operations (loading, saving), format mapping, and managing the final image outputs.
@@ -23,7 +23,7 @@ gui_layout.py (Member 3): Constructed the entire wxPython interface (UI Design),
 
 main_app.py (Member 4): Served as the Controller, handling application initialization, event binding, and managing the sequential batch processing loop.
 
-3.** Sample Input/Output**
+# 3.**Sample Input/Output**
 
 A. **Sample Input Screenshot** :
 
@@ -33,7 +33,7 @@ B. **Sample Output Screenshot**:
 
 <img width="745" height="591" alt="image" src="https://github.com/user-attachments/assets/d46becd2-dd33-45b6-9c5b-662bcbeb1f85" />
 
-4. **Challenges Faced**
+# 4. **Challenges Faced**
 The core program logic was verified and correct. However, the team encountered a significant, persistent Import Conflict during the final stage of integration:
 
 Issue: The main_app.py file consistently failed to load the necessary UI component (gui_layout.py).
